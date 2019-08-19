@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "color-functions": "^1.1.0",
+    "@swiftcarrot/color-fns": "^3.0.4",
     "detect-rpi": "^1.1.0",
     "express": "^4.15.3",
     "node-blinkt": "^1.0.1"

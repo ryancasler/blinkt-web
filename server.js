@@ -1,9 +1,8 @@
 const express = require('express')
 const app = express()
-const cssColor = require('color-functions/lib/css-color');
 const isPi = require('detect-rpi')();
 const Blinkt = isPi ? require('node-blinkt') : undefined;
-
+const {cssColor}= require('@swiftcarrot/color-fns');
 
 function chip(color) {
   return `<a href='/color/${encodeURIComponent(color)}' class="chip" style='background-color:${color}'></a>`
@@ -79,7 +78,7 @@ app.get('/color/:color', (req, res) => {
   }
 })
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3020;
 app.listen(port, function () {
-  console.log('Example app listening on port 3000!')
+  console.log('Example app listening on port 3020!')
 })
